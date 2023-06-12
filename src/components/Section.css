@@ -1,0 +1,60 @@
+:root {
+    --primary : linear-gradient(to bottom right, #0a0057, #3f00ee);
+    --secondary : gold;
+    --text : #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    min-height: 100vh;
+    background-image: var(--primary);
+    font-family: sans-serif;
+    color: var(--text);
+
+    display: flex;
+    align-items: center;
+} */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.video-playlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #0a0057;
+}
+
+.main-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.playlist-button {
+    width: 500px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: azure;
+    cursor: pointer;
+}
+
+.play-pause-icon {
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

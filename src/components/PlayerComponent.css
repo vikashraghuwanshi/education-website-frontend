@@ -1,0 +1,6 @@
+.video-player {
+    margin-left: 12.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
