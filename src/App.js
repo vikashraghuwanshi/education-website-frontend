@@ -2,19 +2,19 @@ import "./App.css";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Quiz from "./components/Quiz";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Signup from "./components/SignUp";
-import Signin from "./components/signin";
-import { useEffect, useState } from "react";
 import tokenService from "./services/token";
+import SignUp from "./components/SignUp";
+import SignIn from "./components/SignIn";
+import { useEffect, useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import EmailVerify from "./components/EmailVerify";
+import Spinner from "./components/Spinner";
+
 
 
 function App() {
 
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
   const [user, setUser] = useState(null)
-
 
   useEffect(() => {
     const loggedUserJSON = window.localStorage.getItem('loggedUser')
@@ -25,18 +25,21 @@ function App() {
     }
   }, [])
 
+
   return (
-    <Router>
+    <>
       <Navbar user={user} setUser={setUser}/>
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/sign-in' element={<Signin user={user} setUser={setUser} email={email} setEmail={setEmail}
-                                        password={password} setPassword={setPassword}/>}/>
-        <Route path='/sign-up' element={<Signup email={email} setEmail={setEmail}
-                                        password={password} setPassword={setPassword}/>}/>
+        <Route path='/sign-in' element={!user ? <SignIn user={user} setUser={setUser}/>
+                                      : <Navigate replace to="/" />}/>
+        <Route path='/sign-up' element={!user ? <SignUp/>
+                                      : <Navigate replace to="/" />}/>
+        <Route path='/users/:id/verify/:token' element={<EmailVerify />} />
         <Route path='/quiz' exact Component={Quiz} />
+        <Route path='/spinner' exact Component={Spinner} />
       </Routes>
-    </Router>
+    </>
   );
 }
 

@@ -27,11 +27,9 @@ function Quiz() {
             <span className="question">{currentQuestion+1}. {quizData[currentQuestion].question}</span>
           </div>
 
-          {console.log(quizData)}
-
           {quizData[currentQuestion].options.map((data, id) => {
             return <div className="option-container question">
-                      <button class={selectedOption === id+1 
+                      <button className={selectedOption === id+1 
                       ? "colored-option-button" : "option-button"}
                       onClick={()=>{
                         setSelectedOption(id+1);

@@ -38,6 +38,11 @@
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
 	cursor: pointer;
+	margin-top: 10px;
+}
+
+.googleSignInbutton {
+	margin-top: 20px;
 }
 
 .button:active {
@@ -211,4 +216,18 @@
 	.formContainer {
 		width: 100%;
 	}
+}
+
+
+.passwordcontainer {
+	position: relative;
+	width: 100%;
+}
+  
+.passwordtoggle {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	cursor: pointer;
 }

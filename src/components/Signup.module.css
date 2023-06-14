@@ -5,6 +5,7 @@
 
 .h2 {
 	text-align: center;
+	margin-bottom: 7px;
 }
 
 .p {
@@ -38,6 +39,7 @@
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
 	cursor: pointer;
+	margin-top: 10px;
 }
 
 .button:active {
@@ -62,6 +64,7 @@
 	padding: 0 50px;
 	height: 100%;
 	text-align: center;
+	margin-top: 10px;
 }
 
 .input {
@@ -195,3 +198,17 @@
 
 
   }
+
+
+.passwordcontainer {
+	position: relative;
+	width: 100%;
+}
+  
+.passwordtoggle {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	cursor: pointer;
+}

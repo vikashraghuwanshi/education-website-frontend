@@ -10,7 +10,7 @@ function Footer () {
         <div className='footer-container'>
             <section className='footer-subscription'>
                 <p className='footer-subscription-heading'>
-                    Join XCEED Education to receive our best online courses
+                    Join XSEED Education to receive our best online courses
                 </p>
                 <p className='footer-subscription-text'>
                     You can unsubsribe at any time.
@@ -31,7 +31,7 @@ function Footer () {
             </section>
             <div className='footer-links'>
                 <div className='footer-link-wrapper'>
-                    <div class='footer-link-items'>
+                    <div className='footer-link-items'>
                         <h2>About</h2>
                         <Link to='/'>Our Mission</Link>
                         <Link to='/'>Meet the Team</Link>
@@ -39,7 +39,7 @@ function Footer () {
                         <Link to='/'>Press</Link>
                         <Link to='/'>Careers</Link>
                     </div>
-                    <div class='footer-link-items'>
+                    <div className='footer-link-items'>
                         <h2>Contact Us</h2>
                         <Link to='/'>Status</Link>
                         <Link to='/'>Security</Link>
@@ -48,7 +48,7 @@ function Footer () {
                     </div>
                     </div>
                     <div className='footer-link-wrapper'>
-                    <div class='footer-link-items'>
+                    <div className='footer-link-items'>
                         <h2>Support</h2>
                         <Link to='/'>Certified Educator Program</Link>
                         <Link to='/'>Webinars</Link>
@@ -57,7 +57,7 @@ function Footer () {
                         <Link to='/'>Help</Link>
                         <Link to='/'>Contact Us</Link>
                     </div>
-                    <div class='footer-link-items'>
+                    <div className='footer-link-items'>
                         <h2>Social Media</h2>
                         <Link to='/'>Instagram</Link>
                         <Link to='/'>Facebook</Link>
@@ -70,10 +70,10 @@ function Footer () {
                 <div className='social-media-wrap'>
                     <div className = 'footer-logo'>
                         <Link className='social-logo'>
-                            XCEED Education <i className='fab fa-typo3'/>
+                            XSEED Education <i className='fab fa-typo3'/>
                         </Link>
                     </div>
-                    <small className='website-rights'>XCEED Education</small>
+                    <small className='website-rights'>XSEED Education</small>
                     <div className='social-icons'>
                         <Link className='social-icon-link facebook'
                         to = "/"

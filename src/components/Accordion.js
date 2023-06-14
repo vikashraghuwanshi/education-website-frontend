@@ -11,11 +11,12 @@ export default function Accordion(props) {
 
     const [toggle, setToggle] = useState(false)
     const [heightEl, setHeightEl] = useState();
+    
 
     const refHeight = useRef()
 
     useEffect(() => {
-        console.log(refHeight);
+        // console.log(refHeight);
         setHeightEl(`${refHeight.current.scrollHeight + 20}px`)
     }, [])
 
@@ -23,7 +24,7 @@ export default function Accordion(props) {
         setToggle(!toggle)
     }
 
-    console.log(toggle);
+    // console.log(toggle);
     return (
         <div className="accordion">
 
@@ -43,7 +44,9 @@ export default function Accordion(props) {
                     {sectionText[props.id+'']}
                 </p>
                 <div>
-                    <Section section={props.id}/>
+                    <Section section_id={props.id} url={props.url} setUrl={props.setUrl}
+                                title={props.title} setTitle={props.setTitle}
+                                videoPlaying={props.videoPlaying} setVideoPlaying={props.setVideoPlaying}/>
                 </div>
 
                 <div className='divs'>
