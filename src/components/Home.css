@@ -1,13 +1,16 @@
 .class-title {
-    font-size: 30px;
+    /* position: relative; */
+    font-size: 25px;
     margin-left: 90px;
-    margin-top: 60px;
-    color: rgb(217, 39, 54)
+    margin-top: 120px;
+    color: #0c0101;
+    padding-top: 120px;
 }
 
 
 .chapter-title {
-    font-size: 40px;
+    font-size: 35px;
     margin-left: 90px;
-    color: rgb(221, 135, 49)
+    margin-bottom: 30px;
+    color: rgb(83, 159, 16)
 }

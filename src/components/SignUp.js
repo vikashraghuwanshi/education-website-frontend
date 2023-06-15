@@ -6,6 +6,7 @@ import signUpService from '../services/signup'
 import Spinner from './Spinner'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+import { Checkbox } from '@material-ui/core'
 
 
 const SignUp = (props) => {  
@@ -16,6 +17,7 @@ const SignUp = (props) => {
   const [lastname, setLastName] = useState("")
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [checked, setChecked] = useState(false)
   const [alertMessage, setAlertMessage] = useState('')
   const [showSpinner, setShowSpinner] = useState(false)
   const [showPassword, setShowPassword] = useState(false);
@@ -48,6 +50,7 @@ const SignUp = (props) => {
     setLastName('')
     setPassword('')
     setRepeatPassword('')
+    setChecked(false)
     // navigate('/')
   }
 
@@ -99,7 +102,7 @@ const SignUp = (props) => {
 
   return ( <>  
   {showSpinner && <Spinner/>}
-    <div className={`${styles.container} ${styles.rightPanelActive}`} >
+    <div className={`${styles.signup_container} ${styles.rightPanelActive}`} >
         <div className={`${styles.formContainer} ${styles.signUpContainer}`}>
           <form action="#" className={`${styles.form}`} onSubmit={signup}>
           {alertMessage && <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -138,9 +141,17 @@ const SignUp = (props) => {
               />
             </div>
             
+            <div className={styles.accept_terms}>
+              <Checkbox checked={checked} onChange={(e)=>setChecked(e.target.checked)}></Checkbox>
+              <span>Accept terms & conditions</span>
+            </div>
+            
+            
 
-            <button className={`${styles.button}`} type="submit"
-                      disabled={repeatPassword && password!==repeatPassword}>Sign Up</button>
+            <button className={`${(repeatPassword && password!==repeatPassword) || !checked 
+                      ? styles.disabled_button : styles.button}`} type="submit"
+                      disabled={(repeatPassword && password!==repeatPassword)
+                                || !checked}>Sign Up</button>
            
           </form>
         </div>

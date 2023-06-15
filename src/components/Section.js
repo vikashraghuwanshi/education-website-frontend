@@ -24,7 +24,7 @@ function Section(props) {
 
    return (
       <>
-        <div className="container">
+        <div className="section-container">
             <div className="video-playlist">
                 {sectionData[props.section_id-1].map((item, id) => {
                     return (

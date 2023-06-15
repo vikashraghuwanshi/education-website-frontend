@@ -20,12 +20,14 @@
     align-items: center;
 } */
 
-.container {
+.section-container {
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    max-width: 100%;
 }
 
 .video-playlist {
@@ -33,6 +35,8 @@
     flex-direction: column;
     justify-content: center;
     background-color: #0a0057;
+    margin-right: 80px;
+    margin-left: 0px;
 }
 
 .main-video {
@@ -42,7 +46,7 @@
 }
 
 .playlist-button {
-    width: 500px;
+    width: 400px;
     height: 50px;
     display: flex;
     align-items: center;

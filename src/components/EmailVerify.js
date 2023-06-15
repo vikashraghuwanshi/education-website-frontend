@@ -41,20 +41,20 @@ const EmailVerify = () => {
 		<div>
 			{showSpinner && <Spinner opaque/>}
 			{!showSpinner && validUrl ? (
-				<div className='container'>
+				<div className='email-verify-container'>
 					<FontAwesomeIcon icon={faCheckToSlot} size="10x" style={{color: "#019d38"}} />
 					<h1>Email verified successfully!!!</h1>
 					<Link to="/sign-in">
-						<button className='green_btn'>Login</button>
+						<button className='email-verify-login-btn'>Login</button>
 					</Link>
 				</div>
 			) : (
-				<div className='container'>
+				<div className='email-verify-container'>
 					<FontAwesomeIcon icon={faHourglassEnd} size='5x' color='#ec2a4e'/>
 					<h1 style={{ color: 'red', marginTop: '10px' }}>Invalid Link!!!</h1>
 					<h2>Login to send verification link again!!!</h2>
 					<Link to="/sign-in">
-						<button className='green_btn'>Login</button>
+						<button className='email-verify-login-btn'>Login</button>
 					</Link>
 				</div>
 			)}

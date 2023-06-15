@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import { Link , useNavigate} from 'react-router-dom';
-import styles from './Login.module.css'
+import styles from './Signin.module.css'
 import loginService from '../services/login'
 import tokenService from '../services/token'
 import jwt_decode from 'jwt-decode'
@@ -64,6 +64,7 @@ const SignIn = (props) => {
 
   const handleGoogleLogin = async (userObject) => {
 
+    setShowSpinner(true)
     try {
       const email = userObject.email
       const firstname = userObject.given_name
@@ -80,6 +81,7 @@ const SignIn = (props) => {
 
       tokenService.setToken(user.token)
       props.setUser(user)
+      console.log(user)
       setEmail('')
       setPassword('')
       navigate('/')
@@ -87,6 +89,7 @@ const SignIn = (props) => {
       // console.log('Error in login')
       setAlertMessage('Some Error Occured. Try Again!!!');
     }
+    setShowSpinner(true)
   }
 
 
@@ -117,7 +120,7 @@ const SignIn = (props) => {
 
     <>
     {showSpinner && <Spinner/>}
-    <div className={styles.container}  >
+    <div className={styles.signin_container}  >
         <div className={`${styles.formContainer} ${styles.signInContainer}`}>
           <form className={styles.form} onSubmit={signin}>
           {alertMessage && <div style={{ display: 'flex', justifyContent: 'center' }}>

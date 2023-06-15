@@ -17,16 +17,22 @@ export default function Accordion(props) {
 
     useEffect(() => {
         // console.log(refHeight);
-        setHeightEl(`${refHeight.current.scrollHeight + 20}px`)
-    }, [])
+        if(toggle) setHeightEl(`${refHeight.current.scrollHeight + 20}px`)
+        else setHeightEl('0px')
+    }, [toggle, props.id])
 
     const toggleState = () => {
         setToggle(!toggle)
     }
 
+    const accordionStyle = {
+        zIndex: toggle ? 1 : 0, // Set a higher z-index for the expanded accordion
+      };
+    
+
     // console.log(toggle);
     return (
-        <div className="accordion">
+        <div className="accordion" style={accordionStyle}>
 
             <button 
             onClick={toggleState}

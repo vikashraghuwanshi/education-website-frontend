@@ -8,9 +8,9 @@ function PlayerComponent(props) {
 
    return (
       <div className='video-player'>
-         <ReactPlayer style={{ cursor: 'pointer' }} ref={playerRefs} url={props.url} controls={true} playing={props.isCurrentVideoPlaying}
+         <ReactPlayer ref={playerRefs} url={props.url} controls={true} playing={props.isCurrentVideoPlaying}
                      onPlay={props.onPlay} onPause={props.onPause} onEnded={props.onEnded}/>
-         <h3 className="title">{props.title}</h3>
+         <h3 className="video-title">{props.title}</h3>
       </div>
    )
 };

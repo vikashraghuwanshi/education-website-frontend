@@ -2,7 +2,7 @@
     position: relative;
   }
   
-  .spinner-overlay {
+.spinner-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -16,7 +16,7 @@
   }
 
 
-  .opaque {
+.opaque {
     background-color: rgb(255, 255, 255);
   }
   

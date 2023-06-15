@@ -1,4 +1,4 @@
-.container {
+.email-verify-container {
 	width: 100vw;
 	height: 70vh;
 	display: flex;
@@ -7,7 +7,7 @@
 	flex-direction: column;
 }
 
-.green_btn {
+.email-verify-login-btn {
 	border: none;
 	outline: none;
 	padding: 15px 0;
