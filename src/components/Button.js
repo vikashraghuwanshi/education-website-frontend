@@ -22,13 +22,13 @@ export const Button = ({
         :SIZES[0];
 
         return (
-            <Link to = {path}>
+            // <Link to = {path}>
                 <button
                 className= {`btn ${checkButtonStyle} ${checkButtonSize}`}
                 onClick={onClick}
                 >
                     {children}
                 </button>
-            </Link>
+            // </Link>
         )
 }

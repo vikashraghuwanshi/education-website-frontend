@@ -10,12 +10,13 @@ function Section(props) {
 
     const [isCurrentVideoPlaying, setIsCurrentVideoPlaying] = useState(true);
 
+
     const onPlay = () => {
-        setIsCurrentVideoPlaying(true);
+        // setIsCurrentVideoPlaying(true);
     };
 
     const onPause = () => {
-        setIsCurrentVideoPlaying(false);
+        // setIsCurrentVideoPlaying(false);
     };
 
     const onEnded = () => {
@@ -31,7 +32,6 @@ function Section(props) {
                         <>
                     <button className='playlist-button' 
                         onClick={()=> {
-
                             let updatedUrls = [null, null, null, null, null, null]
                             updatedUrls[props.section_id-1]=item.url
                             if(updatedUrls[props.section_id-1] === props.url[props.section_id-1]) {

@@ -1,5 +1,5 @@
-.email-verify-container {
-	position: absolute;
+.invalid-url-container {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -12,7 +12,7 @@
     z-index: 999;
 }
 
-.email-verify-login-btn {
+.invalid-url-btn {
 	border: none;
 	outline: none;
 	padding: 15px 0;
@@ -23,5 +23,5 @@
 	font-size: 20px;
 	cursor: pointer;
 	margin-top: 20px;
-	margin-bottom: 10vh;
+    margin-bottom: 10vh;
 }

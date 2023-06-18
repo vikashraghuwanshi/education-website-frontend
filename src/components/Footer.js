@@ -76,21 +76,21 @@ function Footer () {
                     <small className='website-rights'>XSEED Education</small>
                     <div className='social-icons'>
                         <Link className='social-icon-link facebook'
-                        to = "/"
+                        to = '/'
                         target = "_blank"
                         aria-label="Facebook"
                         >
                             <i className='fab  fa-facebook-f' />
                         </Link>
                         <Link className='social-icon-link instagram'
-                        to = "/"
+                        to = '/'
                         target = "_blank"
                         aria-label="Instagram"
                         >
                             <i className='fab  fa-instagram' />
                         </Link>
                         <Link className='social-icon-link youtube'
-                        to = "/"
+                        to = '/'
                         target = "_blank"
                         aria-label="YouTube"
                         >
@@ -98,7 +98,7 @@ function Footer () {
                         </Link>
 
                         <Link className='social-icon-link twitter'
-                        to = "/"
+                        to = '/'
                         target = "_blank"
                         aria-label="Twitter"
                         >
@@ -106,7 +106,7 @@ function Footer () {
                         </Link>
 
                         <Link className='social-icon-link linkedin'
-                        to = "/"
+                        to = '/'
                         target = "_blank"
                         aria-label="LinkedIn"
                         >

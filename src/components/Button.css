@@ -9,6 +9,7 @@
     border: none;
     cursor: pointer;
     color: aqua;
+    font-weight: bold;
 }
 
 .btn--primary {
@@ -16,6 +17,7 @@
     color: #242424;
     border: 1px solid var(--primary);
     color: aqua;
+    font-weight: bold;
 }
 
 .btn--outline {
@@ -24,13 +26,15 @@
     /* padding: 8px 20px; */
     border: 1px solid var(--primary);
     /* transition: all 0.3s ease out; */
-    color: rgb(102, 220, 220);
+    color: rgb(174, 219, 134);
     font-size: 10px;
+    font-weight: bold;
 }
 
 .btn--medium {
-    padding: 5px 13px;
+    padding: 8px 15px;
     font-size: 22px;
+    font-weight: bold;
 }
 
 

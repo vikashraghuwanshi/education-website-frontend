@@ -246,3 +246,8 @@
 	transform: translateY(-50%);
 	cursor: pointer;
 }
+
+.forgot_password {
+	margin-left: 160px;
+	cursor: pointer;
+}

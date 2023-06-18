@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import verifyEmailService from '../services/verify_email'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckToSlot, faHourglassEnd } from '@fortawesome/free-solid-svg-icons';
+import { faCheckToSlot } from '@fortawesome/free-solid-svg-icons';
+import InvalidURL from './InvalidURL';
 
 
 
@@ -49,14 +50,7 @@ const EmailVerify = () => {
 					</Link>
 				</div>
 			) : (
-				<div className='email-verify-container'>
-					<FontAwesomeIcon icon={faHourglassEnd} size='5x' color='#ec2a4e'/>
-					<h1 style={{ color: 'red', marginTop: '10px' }}>Invalid Link!!!</h1>
-					<h2>Login to send verification link again!!!</h2>
-					<Link to="/sign-in">
-						<button className='email-verify-login-btn'>Login</button>
-					</Link>
-				</div>
+				<InvalidURL/>
 			)}
 		</div>
 	);

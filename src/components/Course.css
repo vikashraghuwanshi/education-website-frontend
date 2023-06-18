@@ -1,35 +1,53 @@
-.home {
+.course-body {
     max-width: 95%;
     margin: 10px auto 0;
-    border-radius: 10px;
-    background: #edeaea;
+    border-radius: 20px;
+    background: #f1f1f1;;
     margin-top: 20px;
     padding-top: 30px;
 }
 
+.class-title {
+    /* position: relative; */
+    font-size: 25px;
+    margin-left: 90px;
+    margin-top: 120px;
+    color: #0c0101;
+    padding-top: 120px;
+}
+
+
+.chapter-title {
+    font-size: 35px;
+    margin-left: 90px;
+    margin-bottom: 30px;
+    color: rgb(83, 159, 16)
+}
+
 .accordion-visible {
     /* background: #6739b7; */
-    background: linear-gradient(90deg, #6739b7 0%, #a884e6 100%);
+    background: linear-gradient(90deg, #6739b7 0%, #8b61d3 100%);
     width:  30%;
     color: #efe4e4;
-    border-bottom: 8px solid #cccff2;
+    border-bottom: 8px solid #b1b6e7;
     /* border-right: 8px solid #8388eb; */
     /* border-left: 8px solid #8388eb; */
     /* border-top: 8px solid #8388eb; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 7px 15px; */
+    padding: 7px 15px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border-radius: 30px;
     cursor: pointer;
     max-width: 90%;
     margin-top: 70px;
+    max-height: 100%;
 }
 
 .accordion-visible-section-number {
-    background: #ffffff;
+    background: transparent;
     width:  10%;
     color: #080202;
     display: flex;
