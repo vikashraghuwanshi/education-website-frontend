@@ -10,7 +10,7 @@ function Footer () {
         <div className='footer-container'>
             <section className='footer-subscription'>
                 <p className='footer-subscription-heading'>
-                    Join XSEED Education to receive our best online courses
+                    Join eEducative.io to receive our best online courses
                 </p>
                 <p className='footer-subscription-text'>
                     You can unsubsribe at any time.
@@ -70,10 +70,10 @@ function Footer () {
                 <div className='social-media-wrap'>
                     <div className = 'footer-logo'>
                         <Link className='social-logo'>
-                            XSEED Education <i className='fab fa-typo3'/>
+                            eEducative.io <i className='fab fa-typo3'/>
                         </Link>
                     </div>
-                    <small className='website-rights'>XSEED Education</small>
+                    <small className='website-rights'>eEducative.io</small>
                     <div className='social-icons'>
                         <Link className='social-icon-link facebook'
                         to = '/'

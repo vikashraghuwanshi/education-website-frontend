@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react';
-import { Link , Navigate, useNavigate} from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import styles from './Signin.module.css'
 import loginService from '../services/login'
 import tokenService from '../services/token'
@@ -113,7 +113,7 @@ const SignIn = (props) => {
       // console.log('Error in login')
       setAlertMessage('Some Error Occured. Try Again!!!');
     }
-    setShowSpinner(true)
+    setShowSpinner(false)
   }
 
 
@@ -136,7 +136,7 @@ const SignIn = (props) => {
     {showSpinner && <Spinner/>}
     <div className={styles.signin_container}  >
         <div className={`${styles.formContainer} ${styles.signInContainer}`}>
-          <form action='#'className={styles.form} onSubmit={signin}>
+          <form action='#'className={styles.form} onSubmit={signin} autoComplete='on'>
           {alertMessage && <div style={{ display: 'flex', justifyContent: 'center' }}>
                               <span  style= {{ color: alertMessage[0] === 'V' 
                               ? 'green' : 'red', marginBottom: '40px'}} >{alertMessage}</span>
@@ -144,13 +144,13 @@ const SignIn = (props) => {
             <h2 className={styles.h2}>Sign in</h2>
             <input className={styles.input} type="email" placeholder="Email" 
                         value={email} onChange={(e) => setEmail(e.target.value)} 
-                        autocomplete='email' required />
+                        autoComplete='email' autoFocus required />
             
             <div className={styles.passwordcontainer}>
               <input className={styles.input} type={showPassword ? 'text' : 'password'}
                         placeholder="Password" value={password} 
                         onChange={(e) => setPassword(e.target.value)} 
-                        autocomplete='current-password' required />
+                        autoComplete='current-password' required />
               <FontAwesomeIcon
                 icon={showPassword ? faEyeSlash : faEye}
                 className={styles.passwordtoggle}

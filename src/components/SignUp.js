@@ -104,7 +104,7 @@ const SignUp = (props) => {
   {showSpinner && <Spinner/>}
     <div className={`${styles.signup_container} ${styles.rightPanelActive}`} >
         <div className={`${styles.formContainer} ${styles.signUpContainer}`}>
-          <form action="#" className={`${styles.form}`} onSubmit={signup}>
+          <form action="#" className={`${styles.form}`} onSubmit={signup} autoComplete='on'>
           {alertMessage && <div style={{ display: 'flex', justifyContent: 'center' }}>
                               <span  style= {{ color: alertMessage[0] === 'V' 
                               ? 'green' : 'red', marginBottom: '30px'}} >{alertMessage}</span>
@@ -112,7 +112,7 @@ const SignUp = (props) => {
 
             <h2 className={styles.h2}>Create Account</h2>
             <input className={styles.input} type="text" placeholder="First Name" 
-                      value={firstname} onChange={(e)=> {updateFirstName(e)}}  required />
+                      value={firstname} onChange={(e)=> {updateFirstName(e)}}  autoFocus required />
             <input className={styles.input} type="text" placeholder="Last Name" 
                       value={lastname} onChange={(e)=> {updateLastName(e)}} required />
             <input className={`${styles.input}`} type="email" placeholder="Email" 
@@ -121,7 +121,7 @@ const SignUp = (props) => {
             <div className={styles.passwordcontainer}>
               <input className={styles.input} type={showPassword ? 'text' : 'password'}
                         placeholder="Password" value={password} 
-                        onChange={(e) => updatePassword(e)} required />
+                        onChange={(e) => updatePassword(e)} autoComplete='current-password' required />
               <FontAwesomeIcon
                 icon={showPassword ? faEyeSlash : faEye}
                 className={styles.passwordtoggle}
@@ -133,7 +133,8 @@ const SignUp = (props) => {
             <div className={styles.passwordcontainer}>
               <input className={styles.input} type={showRepeatPassword ? 'text' : 'password'}
                         placeholder="Repeat Password" value={repeatPassword} 
-                        onChange={(e) => updateRepeatPassword(e)} required />
+                        onChange={(e) => updateRepeatPassword(e)} autoComplete='current-password' 
+                        required />
               <FontAwesomeIcon
                 icon={showRepeatPassword ? faEyeSlash : faEye}
                 className={styles.passwordtoggle}

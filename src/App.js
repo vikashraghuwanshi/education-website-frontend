@@ -6,7 +6,7 @@ import tokenService from "./services/token";
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import EmailVerify from "./components/EmailVerify";
 import UpdatePassword from "./components/UpdatePassword";
 import ErrorPage from "./components/ErrorPage";

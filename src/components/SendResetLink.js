@@ -91,7 +91,7 @@ const SendResetLink = () => {
   <>
     {showSpinner && <Spinner/>}
     <Container component="main" className={classes.change_password_container}>
-        <form className={classes.form} onSubmit={handleSubmit} autocomplete='on'>
+        <form className={classes.form} onSubmit={handleSubmit} autoComplete='on'>
 
             <div style={{ paddingBottom:'50px' }}>
               {alertMessage && (
@@ -108,9 +108,10 @@ const SendResetLink = () => {
                 type="email"
                 value={email}
                 onChange={handleEmailChange}
-                variant="outlined"
-                autocomplete='email'
+                // variant="outlined"
+                autoComplete='email'
                 fullWidth
+                autoFocus
                 required
                 className={classes.textField}
             />

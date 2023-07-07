@@ -12,7 +12,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate, useParams } from 'react-router-dom';
 import changePasswordService from '../services/change_password';
-import forgotPasswordService from '../services/forgot_password';
 import resetLinkVerifyService from '../services/verify_reset_link'
 import InvalidURL from './InvalidURL';
 
@@ -104,13 +103,9 @@ export default function UpdatePassword(props) {
 					id, token
 				})
 
-        console.log("yes")
-        console.log(data)
         setUserToken(data.token)
-        console.log("yes")
 				setValidUrl(true)
 			} catch (error) {
-				// console.log(error)
 				setValidUrl(false)
 			}
       setReset(false)
@@ -143,35 +138,18 @@ export default function UpdatePassword(props) {
     e.preventDefault();
 
     try {
-      
-      if(!props.reset) {
-        const token = props.user.token
+        const token = props.reset ? userToken : props.user.token
         const user = await changePasswordService.changePassword({
           password: newPassword
         }, token)
-        console.log(user)
         setAlertMessage(user)
         setTimeout(() => {
           setShowSpinner(false)
-          navigate('/')
+          props.reset ? navigate('/sign-in') : navigate('/')
         }, 1000);
 
-      } else {
-
-        const user = await changePasswordService.changePassword({
-          password: newPassword
-        }, userToken)
-        console.log(user)
-        setAlertMessage(user)
-        setTimeout(() => {
-          setShowSpinner(false)
-          navigate('/sign-in')
-        }, 1000);
-      }
-
-      // navigate('/chnged-pwd-success')
     } catch (error) {
-        console.log('Error in changing password')
+        // console.log('Error in changing password')
         if (
           error.response &&
           error.response.status >= 400 &&
@@ -179,7 +157,7 @@ export default function UpdatePassword(props) {
         ) {
           setAlertMessage(error.response.data.error)
         } else setAlertMessage('Some Error Occured. Try Again!!!')
-        console.log(error)
+        // console.log(error)
         setShowSpinner(false)
     }
 
@@ -219,10 +197,11 @@ export default function UpdatePassword(props) {
                   type={showPassword ? 'text' : 'password'}
                   value={newPassword}
                   onChange={handleNewPasswordChange}
-                  variant="outlined"
+                  // variant="outlined"
                   fullWidth
                   required
                   className={classes.textField}
+                  autoFocus
                 />
                 <IconButton
                   size='small'
@@ -239,7 +218,7 @@ export default function UpdatePassword(props) {
                   type={showRepeatPassword ? 'text' : 'password'}
                   value={repeatPassword}
                   onChange={handleRepeatPasswordChange}
-                  variant="outlined"
+                  // variant="outlined"
                   fullWidth
                   required
                   className={classes.textField}

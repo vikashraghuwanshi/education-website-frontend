@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import {Button} from './Button'
 import './Navbar.css'
-import { Button as BTN, Divider, List, ListItem, ListItemText, Menu, MenuItem, Popover, makeStyles } from '@material-ui/core'
+import { Button as BTN, Divider, List, ListItem, ListItemText, Popover, makeStyles } from '@material-ui/core'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
@@ -104,7 +104,7 @@ function Navbar(props) {
         <nav className='navbar'>
             <div className='navbar-container'>
                 <Link to = '/' className = "navbar-logo" onClick={closeMobileMenu}>
-                    XSEED Education <i className='fab fa-typo3'/>
+                    eEducative.io <i className='fab fa-typo3'/>
                 </Link>
                 <ul className= {click ? 'nav-menu' : 'nav-menu'}>
                     <li className='nav-item'>
